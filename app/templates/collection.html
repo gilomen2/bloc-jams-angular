@@ -1,13 +1,13 @@
-<div class="collection-album-container column fourth">
-      <img src="assets/images/album_covers/01.png" />
-     <div class="collection-album-info caption">
-          <p>
-             <a ui-sref="album" class="album-name">The Colors</a>
-             <br />
-             <a ui-sref="album">Pablo Picasso</a>
-             <br />
-             X songs
-             <br />
-         </p>
-     </div>
+<div class="collection-album-container column fourth" ng-repeat="album in collection.albums">
+  <img src="{{ album.albumArtUrl }}" />
+  <div class="collection-album-info caption">
+    <p>
+       <a ui-sref="album" class="album-name">{{ album.title }}</a>
+       <br />
+       <a ui-sref="album">{{ album.artist }}</a>
+       <br />
+       {{ album.songs.length }} songs
+       <br />
+    </p>
+  </div>
 </div>
