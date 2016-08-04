@@ -11,7 +11,7 @@
               </span>
               <span class="ion-pause"
                   ng-show="playerBar.songPlayer.currentSong.playing"
-                  ng-click="playerBar.songPlayer.pause()">
+                  ng-click="playerBar.songPlayer.pause(playerBar.songPlayer.currentSong)">
               </span>
           </a>
           <a class="next" ng-click="playerBar.songPlayer.next()">
@@ -30,7 +30,7 @@
       </div>
       <div class="control-group volume">
           <span class="ion-volume-high icon"></span>
-          <seek-bar value="{{ playerBar.songPlayer.volume }}" max="100" on-change="playerBar.songPlayer.setVolume(value)"></seek-bar>  
+          <seek-bar value="{{ playerBar.songPlayer.volume }}" max="100" on-change="playerBar.songPlayer.setVolume(value)"></seek-bar>
       </div>
   </div>
 </section>
